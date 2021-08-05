@@ -11,30 +11,37 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
-.navtop{    
+body::-webkit-scrollbar{
+        display: none;
+            
+}
+
+.navbar{    
     position:fixed;
     width: 100%;
-    background-color:rgb(24, 23, 23);
+    /*background-color:rgb(24, 23, 23);*/
     font-family: 'special elite' ;
     padding: 15px 0;
+    background-color: black;
 }
 
-.navtop .logo{
+.navbar .logo{
     color: #fff;
     font-size: 40px;
     font-weight: 600;
 }
 
-.navtop .logo a{
+.navbar .logo a{
     color: #909096;
     font-size: 35px ;
     font-weight: 600;     
     padding: 35px;
 }
 
-.navtop .logo a span{
+.navbar .logo a span{
     color: blueviolet;
 }
 
@@ -44,26 +51,28 @@ body {
     margin: auto;
 }
 
-.navtop .container {
+.navbar .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.navtop .menu li a{
+.navbar .menu li a{
     color: #909096;
     transition:  color o.3s ease;
     margin-left: 25px;
     font-weight: 500;
     font-size: 18px;
+    cursor: pointer;
+
 }
 
-.navtop .menu li{
+.navbar .menu li{
     display:inline-block ;
 }
 
-.navtop .menu li a:hover{
+.navbar .menu li a:hover{
     color: blueviolet;
 }
 
@@ -79,14 +88,18 @@ body {
 }
 
 .home .container {
-    margin: auto  ;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    justify-items: ;
+    display: flex;
 }
 
 
 .home .home_content .text-1{
     font-size: 40px;
     overflow: hidden;
-    /*animation:typing 2s steps(40) 1s normal both;*/
+    animation:typing 2s steps(40) 1s normal both;
     white-space: nowrap;
     margin-bottom:5px;
 }
@@ -96,7 +109,7 @@ body {
     font-weight: 600;
     margin-left: -3px;
     overflow: hidden;
-    /*animation:typing 2s steps(40) 2s normal both;*/
+    animation:typing 2s steps(40) 2s normal both;
     white-space: nowrap;
 }
 
@@ -104,7 +117,7 @@ body {
     font-size: 40px;
     white-space: nowrap;
     overflow: hidden;  
-    /*animation:typing 2s steps(40) 3s normal both;*/
+    animation:typing 2s steps(40) 3s normal both;
 }
 
 .home .home_content .text-3 span{
@@ -138,6 +151,23 @@ body {
 
 }
 
+@media (max-width: 900px){
+    .contato .contact-content{
+        margin-left: -130px;
+    }
+}
+
+@media (max-width: 700px){
+    .projetos .projeto-container {
+    margin-left: 80px;        
+    }
+}
+
+@media (max-width: 900px){
+    .contato{
+        padding: px;
+    }
+}
 /* home style end*/
 
 
@@ -169,47 +199,58 @@ body {
 
 .sobre{    
     display: flex;
-    height: 100vh;
-    min-height:500px;
+    min-height:600px;
+    max-width: 1000px;
     color: white;
-    font-family: 'special elite' ; 
+    font-family: 'special elite' ;
+    margin: 0 auto;
+ 
+}
+
+.sobre h1{
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.sobre .content{
+    text-align: justify;
 }
 
 /* projeto style*/
 
 
 .projetos{    
-    display: flex;
-    height: 100vh;
-    min-height:500px;
-    color: white;
+    color: #fff;
     font-family: 'special elite' ; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
 }
 
 .projetos .card {
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .projeto-container {
-    max-width: 1300px;
-    padding: 0 80px;
-    margin: auto;    
+    margin:  auto;
 }
 
 
 .projetos h1 {
     text-align: center;
-    padding: 60px;
-    
+    margin-top: 150px;
+
 } 
 
 .projetos p{
     font-size: 18px;
     text-align: justify;
     padding: 30px;
-    
+
 }
 
 .projetos h2{
@@ -218,83 +259,245 @@ body {
 }
 
 .projeto{
-    width: auto;
     padding: 20px;    
-
 }
-
 
 .projeto img{ 
     margin: auto;
-    display: block;
-    width: 200px;
+    width: 120px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.8) 0px 40px 58px -16px,
     rgba(0, 0, 0, 0.72) 0px 30px 22px -10px;;
 }
 
+/* habilidades style*/
 
+.habilidades { 
+    max-width: 1100px;
+    padding: 120px;
+    margin: 0 auto;   
+    color: #fff;
+    height: 100vh;
+    min-height:300px;
+    font-family: 'special elite' ; 
+
+}
+
+.habilidades div{
+    display: flex;
+    border-radius: 10px;
+    padding: 10px 0px;
+}
+
+.habilidades h2{
+    text-align: center;
+    padding: 50px;
+}
+
+.habilidades #html5{
+    background-color: blueviolet;
+    width: 75%;
+    color: #fff;
+    padding: 0.2rem;
+    text-align: end;
+    border-radius: 0.9rem;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 40px 58px -16px,
+    rgba(0, 0, 0, 0.72) 0px 30px 22px -10px;;
+
+}
+
+.habilidades #css3{
+    background-color: blueviolet;
+    width: 65%;
+    color: #fff;
+    padding:0.2rem;
+    text-align: end;
+    border-radius: 0.9rem;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 40px 58px -16px,
+    rgba(0, 0, 0, 0.72) 0px 30px 22px -10px;;
+
+}
+
+.habilidades #js{
+    background-color:blueviolet;
+    width: 40%;
+    color: #fff;
+    padding: 0.2rem;
+    text-align: end;
+    border-radius: 0.9rem;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 40px 58px -16px,
+    rgba(0, 0, 0, 0.72) 0px 30px 22px -10px;;
+
+}
+
+.habilidades #python{
+    background-color: blueviolet;
+    width: 50%;
+    color: #fff;
+    padding: 0.2rem;
+    text-align: end;
+    border-radius: 0.9rem;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 40px 58px -16px,
+    rgba(0, 0, 0, 0.72) 0px 30px 22px -10px;;
+
+}
+
+
+.habilidades #flask{
+    background-color: blueviolet;
+    width: 60%;
+    color: #fff;
+    padding: 0.2rem;
+    text-align: end;
+    border-radius: 0.9rem;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 40px 58px -16px,
+    rgba(0, 0, 0, 0.72) 0px 30px 22px -10px;;
+
+}            
+
+   
+.habilidades #sql{
+    background-color: blueviolet;
+    width: 40%;
+    color: #fff;
+    padding: 0.2rem;
+    text-align: end;
+    border-radius: 0.9rem;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 40px 58px -16px,
+    rgba(0, 0, 0, 0.72) 0px 30px 22px -10px;;
+
+}       
+    
+    
 /* contato style*/
+
+
     
 .contato{    
-    display: flex;
+    color: #fff;
     height: 100vh;
     min-height:500px;
-    color: white;
-    font-family: 'special elite' ; 
-    place-items: center;
-}
-
-.contato .container h2 {
-    text-align: center;
-    margin-bottom: 100px;}
-
-.contato .contact-content .column{
-    width: 50%;
-    height: 80%;
-}
-
-.contato .contact-content .column .infos{
-    margin-top: 20px;
-}
-
-
-.contato .contact-content p{
-    text-align: justify;
-    font-size: 18px ;
-    width: 90%;
-
-}
-
-.contato .container .contact-content{
+    font-family: 'special elite' ;
+    margin:auto;
     display: flex;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    max-width: 1300px;
+    flex-direction: column;
+
+}
+
+
+.contato h2{
+    text-align: center;
+    margin-bottom: 50px;
     
 }
 
+/*.contato .contato-container{
+    background: violet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+.contato .contato-container .contato-content {
+    background-color: rgb(35, 36, 48);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 40px 58px -16px,
+    rgba(0, 0, 0, 0.72) 0px 30px 22px -10px;;
+    border-radius: 10PX;
+    max-width: 500px;
+    max-height: 700px;
+    padding: 20px;
+}
 
 
-.contato .right form .field,
-.contato .right form .fields .field{
-    height: 50px;
-    width: 0%;
+.contato .contato-content form .field,
+.contato .contato-content form .fields  {
+    height: 100%;
+    width: 89%;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+
+
+}
+
+button {
+    width: 50%;
+    margin-left: 100px;
+    margin-top: 10px;
+    border-radius: 6px;
+    padding: 8px;
+    font-family: 'special elite' ; 
+    font-size: 20px;
+    background-color: blueviolet;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 40px 58px -16px,
+    rgba(0, 0, 0, 0.72) 0px 30px 22px -10px;;
+    transition:  color o.3s ease;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color:rgb(107, 39, 170);
+    color: #c2c2c7;
+}
+
+.contato .contato-content form .field input{
+    height: 100%;
+    width: 115%;
+    border: 2px solid 1 lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding: 2px 20px;
+    font-size: 18px;
+}
+
+.contato .contato-content form .field textarea{
+    border: 2px solid 1 lightgray;
+    border-radius: 6px;
+    width: 115%;
 
 }
 
 
 
+#card{
+    background-color: rgb(35, 36, 48);
+    width: 400px;
+    height: 50%;
+    text-align: center;
+    display: grid;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20PX;
+    border-radius: 10PX;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 40px 58px -16px,
+    rgba(0, 0, 0, 0.72) 0px 30px 22px -10px;
+    font-family: 'special elite' ; 
+    color: #fff;
+}
+
+.success{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
 
+}
 
+#card a {
+    color: blueviolet;
+    font-size: 25px;
+    font-weight: 600;
 
-.contato .right form .field input textarea{
-    height: 100%;
-    width: 100%;
-    border: 1px solid 1 lightgray;
-    border-radius: 6px;
-    outline: none;
-    padding: 0 15px;
-    font-size: 17px;
 }
