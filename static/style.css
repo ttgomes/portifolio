@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+body {
+    background: url("https://prod-static.disney-plus.net/us-west-2/builds/e76798ab2a732a884562763cbd19b969a80dcd5b_1606148151180/node_modules/dss-junglebook/components/themes/images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-font-smoothing: antialiased;
+}
+
+.navtop{    
+    position:fixed;
+    width: 100%;
+    background-color:rgb(24, 23, 23);
+    font-family: 'special elite' ;
+    padding: 15px 0;
+}
+
+.navtop .logo{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.navtop .logo a{
+    color: #909096;
+    font-size: 35px ;
+    font-weight: 600;     
+    padding: 35px;
+}
+
+.navtop .logo a span{
+    color: blueviolet;
+}
+
+.container {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.navtop .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.navtop .menu li a{
+    color: #909096;
+    transition:  color o.3s ease;
+    margin-left: 25px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.navtop .menu li{
+    display:inline-block ;
+}
+
+.navtop .menu li a:hover{
+    color: blueviolet;
+}
+
+
+/* home style*/
+
+.home {
+    display: flex;
+    height: 100vh;
+    min-height:500px;
+    color: white;
+    font-family: 'special elite' ; 
+}
+
+.home .container {
+    margin: auto  ;
+}
+
+
+.home .home_content .text-1{
+    font-size: 40px;
+    overflow: hidden;
+    /*animation:typing 2s steps(40) 1s normal both;*/
+    white-space: nowrap;
+    margin-bottom:5px;
+}
+
+.home .home_content .text-2{
+    font-size: 60px;
+    font-weight: 600;
+    margin-left: -3px;
+    overflow: hidden;
+    /*animation:typing 2s steps(40) 2s normal both;*/
+    white-space: nowrap;
+}
+
+.home .home_content .text-3{
+    font-size: 40px;
+    white-space: nowrap;
+    overflow: hidden;  
+    /*animation:typing 2s steps(40) 3s normal both;*/
+}
+
+.home .home_content .text-3 span{
+    color: blueviolet;
+    font-size: 32px;
+    font-weight: 600;
+    white-space: nowrap;
+
+}
+
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    to{
+        width: 16em;
+    }
+}
+/* responsividade*/
+@media (max-width: 900px){
+    .home .container{
+        margin-left: 0px;
+    }
+
+}
+
+@media (max-width: 1200px){
+    .navtop .container .logo{
+        margin-left: -30px;
+    }
+
+}
+
+/* home style end*/
+
+
+.scroll-down {
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #fff;
+}
+
+.scroll-down span {
+    writing-mode: vertical-rl;
+}
+
+.scroll-down svg {
+    margin-top: 10px;
+    width: 10px;
+}
+
+.scroll-down--left {
+    left: 20px;
+    right: auto;
+}
+
+.sobre{    
+    display: flex;
+    height: 100vh;
+    min-height:500px;
+    color: white;
+    font-family: 'special elite' ; 
+}
+
+/* projeto style*/
+
+
+.projetos{    
+    display: flex;
+    height: 100vh;
+    min-height:500px;
+    color: white;
+    font-family: 'special elite' ; 
+}
+
+.projetos .card {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.projeto-container {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;    
+}
+
+
+.projetos h1 {
+    text-align: center;
+    padding: 60px;
+    
+} 
+
+.projetos p{
+    font-size: 18px;
+    text-align: justify;
+    padding: 30px;
+    
+}
+
+.projetos h2{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.projeto{
+    width: auto;
+    padding: 20px;    
+
+}
+
+
+.projeto img{ 
+    margin: auto;
+    display: block;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 40px 58px -16px,
+    rgba(0, 0, 0, 0.72) 0px 30px 22px -10px;;
+}
+
+
+/* contato style*/
+    
+.contato{    
+    display: flex;
+    height: 100vh;
+    min-height:500px;
+    color: white;
+    font-family: 'special elite' ; 
+    place-items: center;
+}
+
+.contato .container h2 {
+    text-align: center;
+    margin-bottom: 100px;}
+
+.contato .contact-content .column{
+    width: 50%;
+    height: 80%;
+}
+
+.contato .contact-content .column .infos{
+    margin-top: 20px;
+}
+
+
+.contato .contact-content p{
+    text-align: justify;
+    font-size: 18px ;
+    width: 90%;
+
+}
+
+.contato .container .contact-content{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+
+
+.contato .right form .field,
+.contato .right form .fields .field{
+    height: 50px;
+    width: 0%;
+
+}
+
+
+
+
+
+
+
+.contato .right form .field input textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid 1 lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+}
